@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import "index.scss";
+import Cards from './Cards';
 const images = [
   {
     name: 'Imagen 1',
@@ -33,23 +34,7 @@ class App extends Component{
           {(images.length === 0) ? "No hay fotos": `(${images.length})`}
           </a>
         </nav>
-          <div className="cards">
-            {
-              images.map(image =>(
-                <div className="card">
-                <img className="card-img-top" src={image.url} alt="Card image cap" height={300}/>
-                <div className="card-body">
-                  <h5 className="card-title">{image.name}</h5>
-                  <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" className="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              ))
-            }
-            
-
-          </div>
-
+          <Cards images={images} />
           <button type="button" class="btn btn-primary bmd-btn-fab" onClick={this.handleAdd}>
             <i class="material-icons">add</i>
           </button>
