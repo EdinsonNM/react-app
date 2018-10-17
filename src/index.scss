@@ -1,7 +1,21 @@
 body {
     div#root{
-      background-color: #222;
+      background-color: rgb(233, 233, 233);
       color: #8EE4AF;
       text-align: center;
     }
   }
+
+.app{
+  .navbar-brand{
+    color: white;
+  }
+  .bmd-btn-fab{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+  .card + div{
+    margin-top: 10px;
+  }
+}
