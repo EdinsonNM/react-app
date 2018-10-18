@@ -36,7 +36,7 @@ class App extends Component{
         </nav>
           <Cards images={images} />
           <button type="button" class="btn btn-primary bmd-btn-fab" onClick={this.handleAdd}>
-            <i class="material-icons">add</i>
+            <i className="material-icons">add</i>
           </button>
         </div>
       )
