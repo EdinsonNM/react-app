@@ -1,11 +1,14 @@
-body {
+html, body {
+    background-color: rgb(233, 233, 233);
     div#root{
-      background-color: rgb(233, 233, 233);
       text-align: center;
     }
   }
 
 .app{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   .navbar{
     position: sticky;
     top: 0;
@@ -21,5 +24,11 @@ body {
   }
   .card + div{
     margin-top: 10px;
+  }
+  .cards{
+    padding: 10px;
+    flex: 1;
+    height: 100%;
+    overflow: auto;
   }
 }

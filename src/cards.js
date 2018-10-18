@@ -17,7 +17,7 @@ class Cards extends React.Component{
                 {
                     images.map(image => <Card name={image.name} url={image.url} />)
                 }
-                <div ref={(ref) => this.scrollElment = ref} style={{clear:'both'}}></div>
+                <div ref={(ref) => this.scrollElment = ref} style={{ float:"left", clear: "both" }}></div>
             </div>
         )
     }

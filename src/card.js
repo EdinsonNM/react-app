@@ -1,14 +1,25 @@
 import React from 'react';
+import { Card as CardMaterial, CardActionArea, CardMedia, CardContent, Typography, CardActions, Button } from '@material-ui/core';
 const Card = ({name, url}) => {
     return (
-        <div className="card">
-            <img className="card-img-top" src={url} alt="Card image cap" height={300}/>
-            <div className="card-body">
-                <h5 className="card-title">{name}</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
+        <CardMaterial>
+            <CardActionArea>
+                <img src={url}  width="100%"/>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {name}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Button size="small" color="primary">
+                Share
+                </Button>
+                <Button size="small" color="primary">
+                Learn More
+                </Button>
+            </CardActions>
+        </CardMaterial>
     )
 }
 export default Card;
